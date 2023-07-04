@@ -1,0 +1,1750 @@
+{
+	"info": {
+		"_postman_id": "c1084f79-88bc-41bd-b4fb-8d893a9f088d",
+		"name": "asgmt5Sequlize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26559299"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\" John\",\r\n    \"email\":\"johndoe@example.com\",\r\n    \"password\":\"password123\",\r\n    \"age\":24\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "emailExist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"lara\",\r\n    \"email\":\"lara@yahoo.com\",\r\n    \"password\":\"123\",\r\n    \"age\":24\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-lqRoCYjJ+l+UP02a8hZiqQb4bho\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Jun 2023 23:05:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Email Exist\"\n}"
+						},
+						{
+							"name": "signUp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\" John\",\r\n    \"email\":\"johndoe@example.com\",\r\n    \"password\":\"password123\",\r\n    \"age\":24\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "228"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e4-6+B+yw0M2hHOvfZfor1zYEQMlEk\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Jun 2023 23:07:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sign Up successfully\",\n    \"user\": {\n        \"confirmEmail\": false,\n        \"id\": 3,\n        \"email\": \"johndoe@example.com\",\n        \"name\": \" John\",\n        \"password\": \"password123\",\n        \"age\": 24,\n        \"updatedAt\": \"2023-06-26T23:07:48.795Z\",\n        \"createdAt\": \"2023-06-26T23:07:48.795Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"johndoe@example.com\",\r\n    \"password\":\"password1223\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"johndoe@example.com\",\r\n    \"password\":\"password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "210"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d2-qiGLWZ0RThEDZ9czKkSbrLFnG/8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Jun 2023 23:09:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login successfully\",\n    \"checkPass\": {\n        \"id\": 3,\n        \"name\": \" John\",\n        \"email\": \"johndoe@example.com\",\n        \"password\": \"password123\",\n        \"age\": 24,\n        \"createdAt\": \"2023-06-26T23:07:48.000Z\",\n        \"updatedAt\": \"2023-06-26T23:07:48.000Z\"\n    }\n}"
+						},
+						{
+							"name": "wrongPassword",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"johndoe@example.com\",\r\n    \"password\":\"password555\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cf-UoHOFCGTaKtTL1veTw44sdwaJ4k\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Jun 2023 23:09:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"password wrong\",\n    \"checkEmail\": {\n        \"id\": 3,\n        \"name\": \" John\",\n        \"email\": \"johndoe@example.com\",\n        \"password\": \"password123\",\n        \"age\": 24,\n        \"createdAt\": \"2023-06-26T23:07:48.000Z\",\n        \"updatedAt\": \"2023-06-26T23:07:48.000Z\"\n    }\n}"
+						},
+						{
+							"name": "invalidEmail",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"johndoe1@example.com\",\r\n    \"password\":\"password12j3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user1/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user1",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-UPsLizj/48L94PoV/qEP8tDbe/U\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Jun 2023 23:27:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid Email\",\n    \"checkEmail\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"jana\",\r\n    \"email\":\"jana@yahoo.com\",\r\n    \"password\":\"123\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "inValidID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"lara\",\r\n    \"email\":\"lara1@yahoo.com\",\r\n    \"password\":\"555\",\r\n    \"age\":30\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24-RRSvoCIfCcaUi9RAFu4RKj7uwmk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 12:48:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"In-valid ID\",\n    \"user\": [\n        0\n    ]\n}"
+						},
+						{
+							"name": "updateUser",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"jana\",\r\n    \"email\":\"jana@yahoo.com\",\r\n    \"password\":\"123\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-am75eoJZBDS6kofhPTrtSAimUFM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:44:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"updated successfully\",\n    \"user\": [\n        1\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"14"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteUser",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-dMpwpZHalCPSMC0kUfTbDiWN/mE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 13:09:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"deleted successfully\",\n    \"user\": 1\n}"
+						},
+						{
+							"name": "inValidID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22-5fwIliGa77b6SC/NdHdi/l+TaVI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 13:10:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"In-valid ID\",\n    \"user\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user/search?start=J&maxAge=30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"search"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "J"
+								},
+								{
+									"key": "maxAge",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "searchOldestUser",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/search/oldest/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"search",
+										"oldest",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "221"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"dd-rRe4+q+vW94UB/HzX+KrqNW935k\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:39:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"3 Oldest Users\",\n    \"users\": [\n        {\n            \"id\": 6,\n            \"name\": \"Camila\",\n            \"email\": \"camila@example.com\",\n            \"age\": 44\n        },\n        {\n            \"id\": 5,\n            \"name\": \"kerala\",\n            \"email\": \"kerala@example.com\",\n            \"age\": 32\n        },\n        {\n            \"id\": 1,\n            \"name\": \"lara\",\n            \"email\": \"lara@yahoo.com\",\n            \"age\": 30\n        }\n    ]\n}"
+						},
+						{
+							"name": "searchIDsList",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/searchList?id=1&id=2&id=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"searchList"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										},
+										{
+											"key": "id",
+											"value": "2"
+										},
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "205"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cd-v4+j6b0GAGsOHOwE+2BJdoUZpCc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:40:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Done\",\n    \"users\": [\n        {\n            \"id\": 1,\n            \"name\": \"lara\",\n            \"email\": \"lara@yahoo.com\",\n            \"age\": 30\n        },\n        {\n            \"id\": 2,\n            \"name\": \"jana\",\n            \"email\": \"jana@yahoo.com\",\n            \"age\": 21\n        },\n        {\n            \"id\": 5,\n            \"name\": \"kerala\",\n            \"email\": \"kerala@example.com\",\n            \"age\": 32\n        }\n    ]\n}"
+						},
+						{
+							"name": "searchAge",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/age/search?minAge=20&maxAge=31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"age",
+										"search"
+									],
+									"query": [
+										{
+											"key": "minAge",
+											"value": "20"
+										},
+										{
+											"key": "maxAge",
+											"value": "31"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "204"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cc-WbWTfHZuDwtG1MKUCdswCFjmXH8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:41:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Done\",\n    \"users\": [\n        {\n            \"id\": 1,\n            \"name\": \"lara\",\n            \"email\": \"lara@yahoo.com\",\n            \"age\": 30\n        },\n        {\n            \"id\": 2,\n            \"name\": \"jana\",\n            \"email\": \"jana@yahoo.com\",\n            \"age\": 21\n        },\n        {\n            \"id\": 3,\n            \"name\": \"John\",\n            \"email\": \"johndoe@example.com\",\n            \"age\": 24\n        }\n    ]\n}"
+						},
+						{
+							"name": "search",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/search?start=J&maxAge=30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"search"
+									],
+									"query": [
+										{
+											"key": "start",
+											"value": "J"
+										},
+										{
+											"key": "maxAge",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-g1Kc4sxwdqnmmlqTfWWY9Pe1ec0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:42:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Done\",\n    \"user\": [\n        {\n            \"id\": 2,\n            \"name\": \"jana\",\n            \"email\": \"jana@yahoo.com\",\n            \"age\": 21\n        },\n        {\n            \"id\": 3,\n            \"name\": \"John\",\n            \"email\": \"johndoe@example.com\",\n            \"age\": 24\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "getUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "usersWithNotes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1178"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"49a-g0Ok9Ha40lyFjKEvnjXUkghfsEQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:38:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"All users\",\n    \"users\": [\n        {\n            \"id\": 1,\n            \"name\": \"lara\",\n            \"email\": \"lara@yahoo.com\",\n            \"age\": 30,\n            \"Notes\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"Sample Note 1 updated\",\n                    \"content\": \"This is a sample note. It contains some text and some bullet points updated.\",\n                    \"UserId\": 1\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"Sample Note 2\",\n                    \"content\": \"This is another sample note. It contains some more text and some checkboxes.\",\n                    \"UserId\": 1\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"John\",\n            \"email\": \"johndoe@example.com\",\n            \"age\": 24,\n            \"Notes\": [\n                {\n                    \"id\": 4,\n                    \"title\": \"Sample Note 3\",\n                    \"content\": \"This is a third sample note. It contains some important information about a task.\",\n                    \"UserId\": 3\n                }\n            ]\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Camila\",\n            \"email\": \"camila@example.com\",\n            \"age\": 44,\n            \"Notes\": [\n                {\n                    \"id\": 5,\n                    \"title\": \"Important Task\",\n                    \"content\": \"This is a note about an important task that needs to be completed.\",\n                    \"UserId\": 6\n                }\n            ]\n        },\n        {\n            \"id\": 5,\n            \"name\": \"kerala\",\n            \"email\": \"kerala@example.com\",\n            \"age\": 32,\n            \"Notes\": [\n                {\n                    \"id\": 6,\n                    \"title\": \"Sample Note 6\",\n                    \"content\": \"This is a sixth sample note. It contains some text and some quotes.\",\n                    \"UserId\": 5\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"jana\",\n            \"email\": \"jana@yahoo.com\",\n            \"age\": 21,\n            \"Notes\": [\n                {\n                    \"id\": 7,\n                    \"title\": \"Sample Note 7\",\n                    \"content\": \"This is a seventh sample note. It contains some text and some code snippets.\",\n                    \"UserId\": 2\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "notes",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Sample Note 3\",\r\n    \"content\":\"This is a third sample note. It contains some important information about a task.\",\r\n    \"UserId\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/note/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"note",
+								"add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addNote",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Sample Note 3\",\r\n    \"content\":\"This is a third sample note. It contains some important information about a task.\",\r\n    \"UserId\":\"3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/note/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"note",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "249"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f9-AIVSL7UrNAS3IvO5OAw71qRsuJI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 13:46:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Note added\",\n    \"note\": {\n        \"id\": 4,\n        \"UserId\": \"3\",\n        \"title\": \"Sample Note 3\",\n        \"content\": \"This is a third sample note. It contains some important information about a task.\",\n        \"updatedAt\": \"2023-06-27T13:46:33.029Z\",\n        \"createdAt\": \"2023-06-27T13:46:33.029Z\"\n    }\n}"
+						},
+						{
+							"name": "In-validUserId",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Sample Note 3\",\r\n    \"content\":\"This is a third sample note. It contains some important information about a task.\",\r\n    \"UserId\":\"10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/note/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"note",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-YxjD1oKWNzZ133QWAKWTz73UiSc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 13:47:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"In-valid UserId\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/note/4/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"note",
+								"4",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteNote",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/note/3/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"note",
+										"3",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b-ssnlOkmw70BpB/AYYq6Eju8g1LU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 13:54:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Done\",\n    \"note\": 1\n}"
+						},
+						{
+							"name": "inValidNoteID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/note/10/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"note",
+										"10",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-xhkSjyVvK4yN1UIvm40Lstc6MPs\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 13:55:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"In-valid Note ID\",\n    \"note\": 0\n}"
+						},
+						{
+							"name": "inValidUserID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/note/4/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"note",
+										"4",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-YxjD1oKWNzZ133QWAKWTz73UiSc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 13:56:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"In-valid UserId\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Sample Note 1 updated\",\r\n    \"content\": \"This is a sample note. It contains some text and some bullet points updated.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/note/1/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"note",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "NoteUpdated",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"title\": \"Sample Note 1 updated\",\r\n    \"content\": \"This is a sample note. It contains some text and some bullet points updated.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/note/1/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"note",
+										"1",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-LoTF7PzuruyTwFW6W/v0g/aFV5I\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:04:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"note updated\",\n    \"note\": [\n        1\n    ]\n}"
+						},
+						{
+							"name": "inValidNoteID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"title\": \"Sample Note 1 updated\",\r\n    \"content\": \"This is a sample note. It contains some text and some bullet points updated.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/note/10/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"note",
+										"10",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-k4d1ng2vCOxs2nNjlP/xuAudNEw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:04:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"In-valid Note ID\",\n    \"note\": [\n        0\n    ]\n}"
+						},
+						{
+							"name": "inValidUserID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"title\": \"Sample Note 1 updated\",\r\n    \"content\": \"This is a sample note. It contains some text and some bullet points updated.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/note/1/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"note",
+										"1",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-YxjD1oKWNzZ133QWAKWTz73UiSc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:06:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"In-valid UserId\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getNotes",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "getAllNotes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/note/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"note",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1289"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"509-hdKgbKAf/dorPTwVIJYi9pVuE20\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:09:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Done\",\n    \"notes\": [\n        {\n            \"id\": 1,\n            \"title\": \"Sample Note 1 updated\",\n            \"content\": \"This is a sample note. It contains some text and some bullet points updated.\",\n            \"createdAt\": \"2023-06-27T14:20:55.000Z\",\n            \"updatedAt\": \"2023-06-27T14:04:10.000Z\",\n            \"UserId\": 1\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Sample Note 2\",\n            \"content\": \"This is another sample note. It contains some more text and some checkboxes.\",\n            \"createdAt\": \"2023-06-27T14:20:55.000Z\",\n            \"updatedAt\": \"2023-06-27T14:20:55.000Z\",\n            \"UserId\": 1\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Sample Note 3\",\n            \"content\": \"This is a third sample note. It contains some important information about a task.\",\n            \"createdAt\": \"2023-06-27T13:46:33.000Z\",\n            \"updatedAt\": \"2023-06-27T13:46:33.000Z\",\n            \"UserId\": 3\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Important Task\",\n            \"content\": \"This is a note about an important task that needs to be completed.\",\n            \"createdAt\": \"2023-06-27T16:06:48.000Z\",\n            \"updatedAt\": \"2023-06-27T16:06:48.000Z\",\n            \"UserId\": 6\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Sample Note 6\",\n            \"content\": \"This is a sixth sample note. It contains some text and some quotes.\",\n            \"createdAt\": \"2023-06-27T16:06:48.000Z\",\n            \"updatedAt\": \"2023-06-27T16:06:48.000Z\",\n            \"UserId\": 5\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Sample Note 7\",\n            \"content\": \"This is a seventh sample note. It contains some text and some code snippets.\",\n            \"createdAt\": \"2023-06-27T16:08:39.000Z\",\n            \"updatedAt\": \"2023-06-27T16:08:39.000Z\",\n            \"UserId\": 2\n        }\n    ]\n}"
+						},
+						{
+							"name": "notesWithOwners",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/note/noteList/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"note",
+										"noteList",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1222"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c6-8CJuSNBQtJrhK8dQfO7t8pqf5Jk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:15:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Done\",\n    \"notes\": [\n        {\n            \"id\": 1,\n            \"title\": \"Sample Note 1 updated\",\n            \"content\": \"This is a sample note. It contains some text and some bullet points updated.\",\n            \"UserId\": 1,\n            \"User\": {\n                \"id\": 1,\n                \"name\": \"lara\",\n                \"email\": \"lara@yahoo.com\",\n                \"age\": 30\n            }\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Sample Note 2\",\n            \"content\": \"This is another sample note. It contains some more text and some checkboxes.\",\n            \"UserId\": 1,\n            \"User\": {\n                \"id\": 1,\n                \"name\": \"lara\",\n                \"email\": \"lara@yahoo.com\",\n                \"age\": 30\n            }\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Sample Note 3\",\n            \"content\": \"This is a third sample note. It contains some important information about a task.\",\n            \"UserId\": 3,\n            \"User\": {\n                \"id\": 3,\n                \"name\": \"John\",\n                \"email\": \"johndoe@example.com\",\n                \"age\": 24\n            }\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Important Task\",\n            \"content\": \"This is a note about an important task that needs to be completed.\",\n            \"UserId\": 6,\n            \"User\": {\n                \"id\": 6,\n                \"name\": \"Camila\",\n                \"email\": \"camila@example.com\",\n                \"age\": 44\n            }\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Sample Note 6\",\n            \"content\": \"This is a sixth sample note. It contains some text and some quotes.\",\n            \"UserId\": 5,\n            \"User\": {\n                \"id\": 5,\n                \"name\": \"kerala\",\n                \"email\": \"kerala@example.com\",\n                \"age\": 32\n            }\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Sample Note 7\",\n            \"content\": \"This is a seventh sample note. It contains some text and some code snippets.\",\n            \"UserId\": 2,\n            \"User\": {\n                \"id\": 2,\n                \"name\": \"jana\",\n                \"email\": \"jana@yahoo.com\",\n                \"age\": 24\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
